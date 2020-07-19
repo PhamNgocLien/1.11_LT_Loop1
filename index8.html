@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bài 8</title>
+</head>
+<body>
+<button id="play" onclick="playRandom()">Chơi</button>
+<script>
+    let min = +prompt("Bạn muốn đoán trong khoảng nào?");
+    let max = +prompt("Bạn muốn đoán trong khoảng nào");
+
+    function playRandom() {
+        let random = Math.floor(Math.random() * max) + min;
+        let i = 1;
+        if (i < 4) {
+            while (i < 4) {
+                let number = +prompt("Hãy nhập số bạn dự đoán");
+                if (random == +number) {
+                    alert("Xin chúc mừng");
+                    break;
+                } else {
+                    while (random !== number) {
+                        if (random > number) {
+                            while (random > number) {
+                                alert("Hãy nhập số lớn hơn");
+                                i++;
+                                break;
+                            }
+                            break;
+                        } else {
+                            while (random < number) {
+                                alert("Hãy nhập số bé hơn");
+                                i++;
+                                break;
+                            }
+                            break
+                        }
+                    }
+                }
+            }
+        }
+    }
+</script>
+</body>
+</html>
