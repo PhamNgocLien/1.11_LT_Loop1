@@ -9,40 +9,15 @@
 </head>
 <body>
 <script>
-    let N = 1;
-    if (N <= 100) {
-        while (N <= 100) {
-            if (N % 3 == 0) {
-                while (N % 3 == 0) {
-                    if (N % 5 == 0) {
-                        while (N % 5 == 0) {
-                            document.write("FizzBuzz" + "<br>");
-                            N++
-                            break;
-                        }
-                    } else {
-                        while (N % 5 != 0) {
-                            document.write("Fizz" + "<br>");
-                            N++
-                            break;
-                        }
-                    }
-                }
-            } else {
-                if (N % 5 == 0) {
-                    while (N % 5 == 0) {
-                        document.write("Buzz" + "<br>");
-                        N++;
-                        break;
-                    }
-                } else {
-                    while (N % 5 != 0) {
-                        document.write(N + "<br>");
-                        N++;
-                        break;
-                    }
-                }
-            }
+    for (let N = 1; N <= 100; N++) {
+        if (N % 3 == 0 && N % 5 == 0) {
+            document.write("FizzBuzz" + "<br>");
+        } else if (N % 3 == 0) {
+            document.write("Fizz" + "<br>");
+        } else if (N % 5 == 0) {
+            document.write("Buzz" + "<br>");
+        } else {
+            document.write(N + "<br>");
         }
     }
 </script>

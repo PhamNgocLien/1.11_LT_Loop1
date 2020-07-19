@@ -19,27 +19,16 @@
         if (i < 4) {
             while (i < 4) {
                 let number = +prompt("Hãy nhập số bạn dự đoán");
-                if (random == +number) {
+                if (random == number) {
                     alert("Xin chúc mừng");
                     break;
                 } else {
-                    while (random !== number) {
-                        if (random > number) {
-                            while (random > number) {
-                                alert("Hãy nhập số lớn hơn");
-                                i++;
-                                break;
-                            }
-                            break;
-                        } else {
-                            while (random < number) {
-                                alert("Hãy nhập số bé hơn");
-                                i++;
-                                break;
-                            }
-                            break
-                        }
+                    if (random > number) {
+                        alert("Hãy nhập số lớn hơn");
+                    } else {
+                        alert("Hãy nhập số nhỏ hơn");
                     }
+                    i++;
                 }
             }
         }
